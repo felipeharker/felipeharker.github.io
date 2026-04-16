@@ -1,0 +1,477 @@
+/* 1) Import your Typekit kit */
+@import url("https://use.typekit.net/tit2mav.css");
+
+/* 2) Define your variables */
+:root {
+  /* COLORS */
+  --clr-0: #ffffff;
+  --clr-1: #ffffff;
+  --clr-2: #0a2342;
+  --clr-3: #7f7f7f;
+  --clr-4: #cccccc;
+  --clr-5: #e37900;
+
+  /* TYPESTACKS */
+  --sans-prim: "nimbus-sans";
+  --serif-prim: "adobe-jenson-pro-display";
+  --sans-prim-2: "helvetica";
+  --serif-prim-2: "times";
+
+  /* FONT-SIZE SCALE */
+  --fs-xs: 1em;
+  --fs-s:  1.125em;
+  --fs-m:  1.25em;
+  --fs-l:  1.75em;
+  --fs-xl: 2.5em;
+
+  /* FONT-WEIGHTS */
+  --fw-light: 200;
+  --fw-medium: 400;
+  --fw-heavy: 600;
+  --fw-black: 800;
+}
+
+/* PRIMARY ELEMENTS */
+/* principle document design elements */
+
+h1,
+h2,
+h3,
+h4,
+summary,
+nav a {
+  font-family: var(--sans-prim), sans-serif;
+}
+
+body {
+  font-family: var(--serif-prim), serif;
+  background-color: var(--clr-1);
+}
+
+/* DOCUMENT */
+
+body {
+  margin-left: 300px;
+  margin-right: 150px;
+  padding: 0;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+section {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+header {
+  text-align: center;
+}
+
+/* TEXT */
+h1,
+h2,
+h3,
+h4,
+header,
+a,
+p,
+nav a {
+  color: var(--clr-2);
+}
+
+h1 {
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-heavy);
+  font-size:    var(--fs-xl);
+  padding:      10px 25px;
+  margin:       0 0 10px 0;
+  text-align:   right;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-heavy);
+  font-size:    var(--fs-l);
+  margin:       .5em 0 .25em 0;
+}
+
+h3 {
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-black);
+  font-size:    var(--fs-m);
+  margin:       .25em 0 .25em 0;
+}
+
+h4 {
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-black);
+  font-size:    var(--fs-s);
+  margin:       .25em 0 .25em 0;
+}
+
+p {
+  font-family:  var(--serif-prim), serif;
+  font-size:    var(--fs-s);
+  font-weight:  var(--fw-medium);
+  margin:       .125em 0 .75em 0;
+}
+
+.i-grey {
+  color: var(--clr-3);
+}
+
+.sub-1 {
+  font-style: italic;
+}
+
+.sub-2 {
+  color: var(--clr-3);
+  font-style: italic;
+}
+
+ul {
+  font-family:  var(--serif-prim), serif;
+  font-size:    var(--fs-s);
+  line-height:  1.75;
+  padding:      0;
+  list-style:   none;
+}
+
+.ul-bull {
+  list-style-type: square;
+}
+
+li {
+  line-height: 1.75;
+  padding:     0;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--clr-4);
+  width: 100%;
+  margin: 0;
+}
+
+/* IMAGES */
+
+img {
+  background-color: var(--clr-0);
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+
+/* CARDS */
+
+.card {
+  border-radius: 2em;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px var(--clr-5);
+  transform: translateY(-6px);
+}
+
+/* DIVIDERS */
+
+hr {
+  width: auto;
+  border: none;
+  border-top: .5px solid var(--clr-3);
+  margin: .5em 0 .5em 0;
+}
+
+br {
+  display: block;
+  margin: 6px 0;
+}
+
+/* LINKS */
+
+a {
+  transition: color 0.3s ease;
+  margin: 5px 0 20px 0;
+}
+
+.no-ul {
+  text-decoration: none;
+  color: inherit;
+}
+
+#link-hov-1:hover {
+  color: var(--clr-5);
+}
+
+/* IFRAME */
+
+iframe {
+  width: 50%;
+  height: 800px;
+  overflow: hidden;
+}
+
+/* DETAILS / SUMMARY */
+
+details {
+  width: relative;
+}
+
+summary {
+  width: 100%;
+}
+
+summary:hover {
+  color: var(--clr-5);
+  transition: 0.5s ease;
+}
+
+details[open] summary {
+  color: var(--clr-5);;
+}
+
+.h2-summ {
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-heavy);
+  font-size:    var(--fs-l);
+  margin:       0 0 .25em 0;
+}
+
+.p-summ {
+  font-family:  var(--sans-prim), sans-serif;
+  font-size:    var(--fs-s);
+  font-weight:  var(--fw-heavy);
+  margin:       .25em 0;
+}
+
+/* NAVIGATION ELEMENTS */
+/* navbar style, see scripts > nav.js */
+
+nav {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.h1-nav {
+  text-align: left;
+}
+
+nav a {
+  font-weight: var(--fw-medium);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: var(--fs-xs);
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+  margin: 0;
+  color: inherit;
+}
+
+.nav-hov-1:hover {
+  background-color: var(--clr-5);
+  font-weight: var(--fw-heavy);
+}
+
+/* ROWS AND COLUMNS */
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+.col-25,
+.col-35,
+.col-50,
+.col-65,
+.col-75,
+.col-100 {
+  margin: 6px 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.col-25  { width: 25%; }
+.col-35  { width: 35%; }
+.col-50  { width: 50%; }
+.col-65  { width: 65%; }
+.col-75  { width: 75%; }
+.col-100 { width: 100%; }
+
+/* This is the only thing you need to add/fix: */
+.col-25 img,
+.col-35 img,
+.col-50 img,
+.col-65 img,
+.col-75 img,
+.col-100 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#c-a1 { margin-right: 50px; }
+#c-a2 { margin-left: 50px; }
+#c-b1 { margin-right: 25px; }
+#c-b2 { margin-left: 25px; }
+
+/* MOBILE-FRIENDLY ELEMENTS */
+/* css compatible with small screens */
+
+@media only screen and (max-width: 1100px) {
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.4;
+  font-family: 'times', serif;
+}
+
+/* Simple top nav bar */
+nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #fff;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: 'helvetica', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: var(--clr-5);
+  color: #fff;
+}
+
+/* Stack rows & full-width cols */
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row .col-25,
+.row .col-35,
+.row .col-50,
+.row .col-65,
+.row .col-75 {
+  width: 100%;
+  margin: 0;
+}
+
+/* override the desktop-only side-margins */
+#c-b1,
+#c-b2 {
+  margin: 0;
+}
+
+/* Headings & text */
+h1 { font-family: 'helvetica',sans-serif; font-size: 1.75em; font-weight:800; margin: .5rem 0; text-transform:uppercase; text-align:right; }
+header {display: none;}
+h2 { font-family: 'helvetica',sans-serif; font-size:1.5em; font-weight:800; margin:.5rem 0; }
+h3 { font-family: 'helvetica',sans-serif; font-size:1.25em; font-weight:800; margin:.5rem 0; }
+p, ul, li { font-size:1em; margin:.25em 0; }
+.sub-1 { font-style: italic; }
+.sub-2 { color: #808080; font-style: italic; }
+.no-ul { text-decoration: none; color: inherit; }
+#link-hov-1:hover { color: var(--clr-5); }
+
+/* Images & cards */
+img { box-sizing: border-box; max-width:100%; height:auto; display:block; }
+.card {
+  width: 100%;
+  border-radius: 1em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: box-shadow .3s, transform .3s;
+}
+.card:hover {
+  box-shadow: 0 6px 18px rgba(255,165,0,0.8);
+  transform: translateY(-6px);
+}
+
+/* hr, br */
+hr { border: none; border-top: .5px solid; margin: .5rem 0; }
+br { display:block; margin:6px 0; }
+
+/* iframe */
+iframe { width:100%; height:400px; }
+
+/* details/summary */
+summary { font-family:'helvetica',sans-serif; padding:.75rem; cursor:pointer; }
+details[open] summary { transition: .5s; }
+.sub-1 {
+    font-style: italic;
+}
+
+.sub-2 {
+    color: #808080;
+    font-style: italic;
+}
+
+}
+
+/* ICON COLLECTION AND STYLING
+.icons-a {
+    color: red
+}
+
+.clock {
+    font-size: 2em;
+}
+
+/* THIS IS A WIP */
+
+/* INTERNAL VISUAL PROGRAMMING AIDE */
+/* programming tool, not meant for external use
+
+header,
+.h1-nav {
+    background-color: lightblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    background-color: #fff;
+}
+
+img {
+    background-color: #fff;
+}
+
+#link-hov-1:hover {
+    color: var(--clr-5);
+}
+*/
