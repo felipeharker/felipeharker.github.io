@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-65 content-primary">
+    <a href="{{ project.url | relative_url }}" {% if project.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+      <img
+        class="card"
+        src="{{ project.image | relative_url }}"
+        alt="{{ project.title }} cover image"
+        loading="lazy"
+        decoding="async"
+      >
+    </a>
+  </div>
+
+  <div class="col-35 content-secondary">
+    <h2>
+      <a href="{{ project.url | relative_url }}" class="no-ul link-hov-1" {% if project.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+        {{ project.title }}
+      </a>
+    </h2>
+    <hr>
+    <a href="{{ project.url | relative_url }}" class="no-ul" {% if project.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+      <p class="sub-0">{{ project.location }}</p>
+      <p class="sub-1">{{ project.category }}</p>
+      <p class="sub-2">{{ project.type }}</p>
+    </a>
+  </div>
+</div>
