@@ -1,0 +1,12 @@
+title: Harkitecture
+email: ""
+description: Portfolio site for Felipe Harker
+baseurl: ""
+url: ""
+markdown: kramdown
+plugins: []
+exclude:
+  - archive
+  - components
+  - pages
+  - styles/styles-main-backup.css

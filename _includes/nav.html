@@ -1,0 +1,14 @@
+<nav>
+  <div id="navbar-header">
+    <h1 class="h1-nav">H</h1>
+  </div>
+  {% for item in site.data.navigation %}
+    <a
+      href="{{ item.url | relative_url }}"
+      class="nav-hov-1"
+      {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}
+    >
+      {{ item.label }}
+    </a>
+  {% endfor %}
+</nav>
