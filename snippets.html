@@ -1,22 +1,36 @@
----
-layout: default
-title: Harkitecture
-heading: Harkitecture
-permalink: /snippets.html
----
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- PROJECT BANNER -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
+    <title>Harkitecture</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./styles/styles-main.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Harkitecture</h1>
+    </header>
+
+    <main>
+        
+        <!-- PROJECT BANNER -->
         <section>
 
             <div class="row">
 
-                <div class="col-75 content-primary">
+                <div class="col-75" id="c-b1">
 
-                    <img src="{{ '/assets/projects/Portfolio-Cover-Images/Alex-Cover-01.png' | relative_url }}" alt="Alex Cover" loading="eager" decoding="async" fetchpriority="high" width="4800" height="2700">
+                    <img src="./assets/projects/Portfolio-Cover-Images/Alex-Cover-01.png">
 
                 </div>
 
-                <div class="col-25 content-secondary">
+                <div class="col-25" id="c-b2">
 
                     <h2>Details</h2>
 
@@ -45,13 +59,13 @@ permalink: /snippets.html
 
             <div class="row">
 
-                <div class="col-75 content-primary">
+                <div class="col-75" id="c-b1">
 
-                    <img src="{{ '/assets/placeholders/image-placeholders-02.png' | relative_url }}" alt="Image Placeholders" loading="lazy" decoding="async" width="5100" height="3300">
+                    <img src="./assets/placeholders/image-placeholders-02.png">
 
                 </div>
 
-                <div class="col-25 content-secondary">
+                <div class="col-25" id="c-b2">
 
                     <h3>Section Subtitle</h3>
 
@@ -69,13 +83,13 @@ permalink: /snippets.html
 
             <div class="row">
 
-                <div class="col-75 content-primary">
+                <div class="col-75" id="c-b1">
 
-                    <img src="{{ '/assets/placeholders/image-placeholders-02.png' | relative_url }}" alt="Image Placeholders" loading="lazy" decoding="async" width="5100" height="3300">
+                    <img src="./assets/placeholders/image-placeholders-02.png">
 
                 </div>
 
-                <div class="col-25 content-secondary">
+                <div class="col-25" id="c-b2">
 
                     <h3>Section Subtitle</h3>
 
@@ -96,17 +110,17 @@ permalink: /snippets.html
         <!-- PROJECT COVER (HOME) -->
         <div class="row">
 
-                <div class="col-65 content-primary">
+                <div class="col-65" id="c-b1">
 
                     <a href="project-a.html">
-                        <img class="card" src="{{ '/assets/projects/Portfolio-Cover-Images/LOTB-Cover-01.png' | relative_url }}" alt="Lotb Cover" loading="lazy" decoding="async" width="4800" height="2700">
+                        <img class="card" src="./assets/projects/Portfolio-Cover-Images/LOTB-Cover-01.png">
                     </a>
 
                 </div>
 
-                <div class="col-35 content-secondary">
+                <div class="col-35" id="c-b2">
                     <h2>
-                        <a href="project-a.html" class="no-ul link-hov-1">Living Outside the Box</a>
+                        <a href="project-a.html" class="no-ul" id="link-hov-1">Living Outside the Box</a>
                     </h2>
                     <hr>
                     <p>
@@ -121,4 +135,8 @@ permalink: /snippets.html
         </div>
 
         <!-- NAVIGATION -->
+        <script src="./scripts/nav.js"></script>
 
+    </main>
+
+</body>
