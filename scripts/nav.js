@@ -1,48 +1,45 @@
-// Create the navbar
-const nav = document.createElement('nav');
+const navLinks = [
+  { href: 'index.html', label: 'Home' },
+  { href: 'about.html', label: 'About' },
+  { href: 'resources.html', label: 'Resources' },
+  { href: 'https://www.linkedin.com/in/felipeharker/', label: 'LinkedIn', external: true },
+  { href: 'https://github.com/felipeharker/alexandria-project', label: 'GitHub', external: true }
+];
 
-// Create a div for the navbar header text
-const navbarHeader = document.createElement('div');
-navbarHeader.id = 'navbar-header';
+function createNavLink({ href, label, external = false }) {
+  const link = document.createElement('a');
+  link.href = href;
+  link.textContent = label;
+  link.className = 'nav-link';
 
-// Create the text element for the navbar header
-const headerText = document.createElement('h1');
-headerText.textContent = 'H'; // The text to display in the navbar header
-headerText.classList.add("h1-nav");
+  if (external) {
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  }
 
-// Append the text to the navbar header div
-navbarHeader.appendChild(headerText);
+  return link;
+}
 
-// Home link
-const navHome = document.createElement('a');
-navHome.href = 'index.html'; // Link to the Home page
-navHome.textContent = 'Home';
-navHome.classList.add("nav-hov-1");
+function renderNavigation() {
+  const nav = document.createElement('nav');
+  nav.className = 'site-nav';
+  nav.setAttribute('aria-label', 'Primary');
 
-// About Me link
-const navAbout = document.createElement('a');
-navAbout.href = 'about.html'; // Link to the About Me page
-navAbout.textContent = 'About';
-navAbout.classList.add("nav-hov-1");
+  const brand = document.createElement('a');
+  brand.href = 'index.html';
+  brand.className = 'site-nav__brand';
+  brand.textContent = 'H';
+  brand.setAttribute('aria-label', 'Harkitecture home');
 
-// LinkedIn
-const navLinked = document.createElement('a');
-navLinked.href = 'index.html'; // Link to the Home page
-navLinked.textContent = 'LinkedIn';
-navLinked.classList.add("nav-hov-1");
+  const linkList = document.createElement('div');
+  linkList.className = 'site-nav__links';
 
-// GitHub
-const navGit = document.createElement('a');
-navGit.href = 'https://github.com/felipeharker/alexandria-project'; // Link to the About Me page
-navGit.textContent = 'GitHub';
-navGit.classList.add("nav-hov-1");
+  navLinks.forEach((linkData) => {
+    linkList.appendChild(createNavLink(linkData));
+  });
 
-// Append the navbar header and links to the navbar
-nav.appendChild(navbarHeader);
-nav.appendChild(navHome);
-nav.appendChild(navAbout);
-nav.appendChild(navLinked);
-nav.appendChild(navGit);
+  nav.append(brand, linkList);
+  document.body.prepend(nav);
+}
 
-// Append the navbar to the body or another element
-document.body.insertBefore(nav, document.body.firstChild);
+renderNavigation();
